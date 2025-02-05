@@ -1,0 +1,38 @@
+[project]
+name = "Ads Playground"
+version = "0.1.0"
+description = "Playing with Flet Ads"
+requires-python = ">=3.9"
+authors = [
+    { name = "TheEthicalBoy", email = "me@example.com" }
+]
+dependencies = [
+  # "flet-ads",
+  "flet==0.26.0"
+]
+
+[tool.poetry]
+package-mode = false
+
+# Packaging Documentation: https://flet.dev/docs/publish
+
+[tool.flet]
+org = "com.mycompany"
+product = "AdsPlayground"
+company = "MyCompany"
+copyright = "Copyright (C) 2025 by TheEthicalBoy"
+
+[tool.flet.app]
+path = "."
+module = "main"
+
+# Ads Documentation: https://flet.dev/docs/controls/ads
+
+[tool.flet.flutter]
+dependencies = ["flet_ads"]
+
+[tool.flet.android.meta_data]
+"com.google.android.gms.ads.APPLICATION_ID" = "ca-app-pub-3940256099942544~3347511713"  # Test ID
+
+[tool.flet.ios.info]
+GADApplicationIdentifier = "ca-app-pub-3940256099942544~3347511713"  # Test ID
